@@ -1,0 +1,18 @@
+.logo {
+	display: flex;
+	align-items: center;
+	gap: rem(11px);
+	font-size: rem(18px);
+	line-height: rem(21.33px);
+
+	&__icon {
+		$icon-size: rem(24px);
+		width: $icon-size;
+		height: $icon-size;
+		color: var(--purple);
+	}
+
+	& span {
+		width: rem(90px);
+	}
+}

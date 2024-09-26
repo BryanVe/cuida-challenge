@@ -4,3 +4,27 @@
 @function rem($px-value) {
 	@return math.div($px-value, $base-font-size) * 1rem;
 }
+
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == 'mobile' {
+		@media (width <= $mobile-breakpoint) {
+			@content;
+		}
+	} @else if $breakpoint == 'desktop' {
+		@media (width > $mobile-breakpoint) {
+			@content;
+		}
+	}
+}
+
+@mixin desktop-hidden {
+	@include respond-to('desktop') {
+		display: none;
+	}
+}
+
+@mixin mobile-hidden {
+	@include respond-to('mobile') {
+		display: none;
+	}
+}

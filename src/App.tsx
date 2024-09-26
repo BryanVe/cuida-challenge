@@ -1,22 +1,5 @@
-import { Button } from './components'
+import { LandingView } from './views'
 
-const App = () => {
-	return (
-		<div>
-			<Button
-				size='sm'
-				variant='transparent'
-			>
-				Sign in
-			</Button>
-			<Button
-				size='sm'
-				variant='outlined'
-			>
-				Sign up
-			</Button>
-		</div>
-	)
-}
+const App = () => <LandingView />
 
 export default App

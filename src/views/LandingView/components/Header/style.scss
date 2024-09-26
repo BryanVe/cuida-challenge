@@ -1,0 +1,22 @@
+.navbar {
+	@include mobile-hidden;
+
+	& ul {
+		display: flex;
+		list-style-type: none;
+		gap: rem(56px);
+
+		& li {
+			font-size: rem(16px);
+			line-height: rem(18.96px);
+			color: var(--gray-950);
+		}
+	}
+}
+
+.menu-button {
+	$icon-size: rem(24px);
+	width: $icon-size;
+	height: $icon-size;
+	@include desktop-hidden;
+}

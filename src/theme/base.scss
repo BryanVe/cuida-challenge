@@ -1,4 +1,5 @@
 button {
+	background-color: unset;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -6,4 +7,9 @@ button {
 	&:disabled {
 		cursor: not-allowed;
 	}
+}
+
+a {
+	color: unset;
+	text-decoration: none;
 }
