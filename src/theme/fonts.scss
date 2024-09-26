@@ -1,0 +1,14 @@
+$rubik-font-data:
+	'Regular' 400,
+	'Medium' 500,
+	'SemiBold' 600;
+
+@each $variant, $weight in $rubik-font-data {
+	@font-face {
+		font-family: 'Rubik';
+		src: url('./assets/fonts/Rubik/Rubik-#{$variant}.ttf');
+		font-weight: $weight;
+		font-style: normal;
+		font-display: swap;
+	}
+}
