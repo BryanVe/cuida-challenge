@@ -8,10 +8,18 @@ export default defineConfig({
 	server: {
 		port: 3000
 	},
+	resolve: {
+		alias: {
+			'~': '/src'
+		}
+	},
 	css: {
 		preprocessorOptions: {
 			scss: {
-				api: 'modern'
+				api: 'modern',
+				additionalData: `
+					@import '~/theme/utils.scss';
+				`
 			}
 		}
 	}
