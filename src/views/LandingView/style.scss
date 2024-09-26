@@ -7,9 +7,7 @@
 	justify-content: center;
 
 	@include respond-to('mobile') {
-		& {
-			padding-block: rem(15px);
-		}
+		padding-block: rem(15px);
 	}
 }
 
@@ -31,9 +29,7 @@
 			gap: rem(32px);
 
 			@include respond-to('mobile') {
-				& {
-					max-width: 100%;
-				}
+				max-width: 100%;
 			}
 		}
 
@@ -42,5 +38,9 @@
 			gap: rem(15px);
 			@include mobile-hidden;
 		}
+	}
+
+	&__main {
+		height: 100dvh;
 	}
 }

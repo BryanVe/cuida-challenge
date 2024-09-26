@@ -1,5 +1,4 @@
-import { Button, Logo } from '~/components'
-import Icon from '~/components/Icon'
+import { Button, Icon, Logo } from '~/components'
 
 import './style.scss'
 

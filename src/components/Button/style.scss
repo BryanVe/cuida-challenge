@@ -23,7 +23,7 @@
 	}
 
 	&:focus-visible {
-		outline: 2px solid var(--purple);
-		outline-offset: 1px;
+		outline: rem(2px) solid var(--purple);
+		outline-offset: rem(1px);
 	}
 }

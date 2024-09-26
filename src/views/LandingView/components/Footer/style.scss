@@ -1,0 +1,114 @@
+$social-link-bg-color: #9638f51a;
+
+.footer {
+	background-color: var(--gray-50);
+	display: grid;
+	place-items: center;
+	padding: rem(60px) rem(19px);
+
+	&__content {
+		width: 100%;
+		max-width: rem(972px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__left {
+			max-width: rem(337px);
+
+			p {
+				color: var(--gray-800);
+				font-size: rem(15px);
+				line-height: rem(17.78px);
+				margin-top: rem(23px);
+				height: rem(77px);
+
+				@include respond-to('mobile') {
+					text-align: center;
+				}
+			}
+
+			.social-links {
+				display: flex;
+				gap: rem(20px);
+				margin-top: rem(10px);
+
+				a {
+					background-color: $social-link-bg-color;
+					border-radius: 50%;
+					padding: rem(6.5px);
+					display: grid;
+					place-items: center;
+
+					svg {
+						$icon-size: rem(24px);
+						width: $icon-size;
+						height: $icon-size;
+						color: var(--purple);
+					}
+				}
+			}
+
+			@include respond-to('mobile') {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		&__right {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			max-width: rem(484px);
+
+			.nav-section {
+				display: flex;
+				flex-direction: column;
+				gap: rem(20px);
+
+				h4 {
+					color: var(--gray-1000);
+					font-size: rem(16px);
+					line-height: rem(18.96px);
+
+					@include respond-to('mobile') {
+						font-size: rem(13.4px);
+						line-height: rem(15.88px);
+					}
+				}
+
+				ul {
+					list-style-type: none;
+					display: flex;
+					flex-direction: column;
+					gap: rem(18px);
+
+					li {
+						color: var(--gray-700);
+						font-size: rem(15px);
+						line-height: rem(17.78px);
+
+						@include respond-to('mobile') {
+							font-size: rem(12.56px);
+							line-height: rem(14.89px);
+						}
+					}
+				}
+			}
+
+			@include respond-to('mobile') {
+				margin-inline: rem(10.84px);
+			}
+		}
+
+		@include respond-to('mobile') {
+			flex-direction: column-reverse;
+			gap: rem(51px);
+		}
+	}
+
+	@include respond-to('mobile') {
+		padding-block: rem(32.93px);
+	}
+}

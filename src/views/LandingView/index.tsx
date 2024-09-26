@@ -1,4 +1,4 @@
-import { Header } from './components'
+import { Footer, Header } from './components'
 import './style.scss'
 
 const LandingView = () => {
@@ -6,7 +6,7 @@ const LandingView = () => {
 		<div className='landing-view'>
 			<Header />
 			<main className='landing-view__main'>main</main>
-			<footer className='landing-view__footer'>footer</footer>
+			<Footer />
 		</div>
 	)
 }
