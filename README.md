@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Reto técnico de Cuida
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web construida con **React** y **Vite** como parte de un reto técnico para **Cuida**.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Debe tener instalado [`Node`](https://nodejs.org/en/download/package-manager) a partir de la versión 20 en adelante.
 
-## Expanding the ESLint configuration
+El proyecto utiliza [`pnpm`](https://pnpm.io/es/) como manejador de paquetes por su gestión eficiente y rápida. Puede instalarlo con [`npm`](https://pnpm.io/es/installation#usando-pnpm) a través del siguiente comando.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ['./tsconfig.node.json', './tsconfig.app.json'],
-			tsconfigRootDir: import.meta.dirname
-		}
-	}
-})
+```sh
+npm install -g pnpm
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Instalación
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Primero, debe clonar el repositorio y luego instalar las dependencias:
 
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: '18.3' } },
-	plugins: {
-		// Add the react plugin
-		react
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs['jsx-runtime'].rules
-	}
-})
+```sh
+# con https
+git clone https://github.com/BryanVe/cuida-challenge.git
+# o con ssh
+git clone git@github.com:BryanVe/cuida-challenge.git
+
+cd cuida-challenge
+pnpm install
 ```
+
+Esto instalará todas las dependencias necesarias para poder correr la aplicación web localmente.
+
+## Ejecución
+
+Para iniciar el servidor de desarrollo, ejecute:
+
+```sh
+pnpm dev
+
+VITE v5.4.3  ready in 240 ms
+
+➜  Local:   http://localhost:3000/
+➜  Network: use --host to expose
+➜  press h + enter to show help
+```
+
+Esto iniciará la aplicación en [`http://localhost:3000`](http://localhost:3000) y escuchará cambios en el proyecto de forma local.
+
+## Despliegue
+
+Para generar el bundle de producción:
+
+```sh
+pnpm build
+```
+
+Los archivos generados estarán disponibles en la carpeta `dist/`, listos para ser desplegados en cualquier servidor de hosting estático (como Netlify, Vercel o Render).
