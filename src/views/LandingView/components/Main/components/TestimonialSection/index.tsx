@@ -88,6 +88,7 @@ const TestimonialSection = () => {
 											<img
 												alt={`${name} profile image`}
 												src={profileImage}
+												draggable={false}
 											/>
 										</div>
 										<div className='testimonial-card__header__right'>

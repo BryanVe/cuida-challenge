@@ -66,6 +66,7 @@ const PricingSection = () => {
 										<img
 											src={planImage}
 											alt='Plan image'
+											draggable={false}
 										/>
 									</div>
 									<h3>{title}</h3>
