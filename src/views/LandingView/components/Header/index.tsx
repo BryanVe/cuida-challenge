@@ -2,7 +2,7 @@ import { Button, Icon, Logo } from '~/components'
 
 import './style.scss'
 
-const navbarItems = [
+const navbarLinks = [
 	{
 		label: 'Features',
 		href: '#features'
@@ -23,15 +23,15 @@ const navbarItems = [
 
 const Header = () => {
 	return (
-		<div className='container'>
-			<header className='landing-view__header'>
-				<div className='landing-view__header__left'>
+		<header className='header'>
+			<div className='header__content'>
+				<div className='header__content__left'>
 					<a href='#'>
 						<Logo />
 					</a>
 					<nav className='navbar'>
 						<ul>
-							{navbarItems.map(({ href, label }) => (
+							{navbarLinks.map(({ href, label }) => (
 								<li key={href}>
 									<a href={href}>{label}</a>
 								</li>
@@ -42,7 +42,7 @@ const Header = () => {
 						<Icon name='menu' />
 					</button>
 				</div>
-				<div className='landing-view__header__right'>
+				<div className='header__content__right'>
 					<Button
 						size='sm'
 						variant='transparent'
@@ -56,8 +56,8 @@ const Header = () => {
 						Sign up
 					</Button>
 				</div>
-			</header>
-		</div>
+			</div>
+		</header>
 	)
 }
 
