@@ -94,7 +94,7 @@ const socialLinks = [
 const Footer = () => (
 	<footer className='footer'>
 		<div className='footer__content'>
-			<div className='footer__content__left'>
+			<div className='footer__content__contact footer__content__contact--desktop'>
 				<Logo />
 				<p>
 					Lorem ipsum dolor sit amet consectetur. Quis tortor gravida nibh arcu
@@ -111,12 +111,9 @@ const Footer = () => (
 					))}
 				</div>
 			</div>
-			<nav className='footer__content__right'>
+			<nav className='footer__content__navigation'>
 				{navSections.map((section, index) => (
-					<div
-						key={index}
-						className='nav-section'
-					>
+					<div key={index}>
 						<h4>{section.title}</h4>
 						<ul>
 							{section.links.map((link, subIndex) => (
@@ -128,6 +125,23 @@ const Footer = () => (
 					</div>
 				))}
 			</nav>
+			<div className='footer__content__contact footer__content__contact--mobile'>
+				<Logo />
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Quis tortor gravida nibh arcu
+					id purus ullamcorper. Vel vel erat semper augue.
+				</p>
+				<div className='social-links'>
+					{socialLinks.map((link, index) => (
+						<a
+							key={index}
+							href={link.href}
+						>
+							<Icon name={link.name} />
+						</a>
+					))}
+				</div>
+			</div>
 		</div>
 	</footer>
 )

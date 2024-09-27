@@ -11,19 +11,13 @@
 		justify-content: space-between;
 		align-items: center;
 
-		&__left {
-			max-width: rem(337px);
-
+		&__contact {
 			p {
 				color: var(--gray-800);
 				font-size: rem(15px);
 				line-height: rem(17.78px);
 				margin-top: rem(23px);
 				height: rem(77px);
-
-				@include respond-to('mobile') {
-					text-align: center;
-				}
 			}
 
 			.social-links {
@@ -47,20 +41,33 @@
 				}
 			}
 
-			@include respond-to('mobile') {
+			&--desktop {
+				max-width: rem(337px);
+				@include mobile-hidden;
+			}
+
+			&--mobile {
+				max-width: rem(484px);
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+
+				@include desktop-hidden;
+				@include respond-to('mobile') {
+					p {
+						text-align: center;
+					}
+				}
 			}
 		}
 
-		&__right {
+		&__navigation {
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
 			max-width: rem(484px);
 
-			.nav-section {
+			div {
 				display: flex;
 				flex-direction: column;
 				gap: rem(20px);
@@ -96,12 +103,11 @@
 			}
 
 			@include respond-to('mobile') {
-				margin-inline: rem(10.84px);
 			}
 		}
 
 		@include respond-to('mobile') {
-			flex-direction: column-reverse;
+			flex-direction: column;
 			gap: rem(51px);
 		}
 	}
