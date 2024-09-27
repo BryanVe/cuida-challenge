@@ -4,7 +4,7 @@ import './style.scss'
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 	variant?: 'filled' | 'outlined' | 'transparent'
-	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+	size?: 'sm' | 'md' | 'lg'
 }
 
 const Button = ({

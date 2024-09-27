@@ -35,7 +35,12 @@ const HeroSection = () => {
 						Lorem ipsum dolor sit amet consectetur. Quis tortor gravida nibh
 						arcu id purus ullamcorper. Vel vel erat semper augue.
 					</p>
-					<Button className='get-started-button'>Get started</Button>
+					<Button
+						size='lg'
+						className='get-started-button'
+					>
+						Get started
+					</Button>
 				</div>
 				<div className='hero-section__content__right'>
 					<img

@@ -7,17 +7,23 @@
 		height: rem(36px);
 		font-size: rem(16px);
 		line-height: rem(18.96px);
-		padding-inline: rem(20px);
-		padding-block: rem(6.5px);
+		padding: rem(6.5px) rem(20px);
 	}
 
 	&--md {
+		width: rem(173px);
+		height: rem(45px);
+		font-size: rem(20px);
+		line-height: rem(23.7px);
+		padding: rem(10.5px) rem(55.5px);
+	}
+
+	&--lg {
 		width: rem(193px);
 		height: rem(54px);
 		font-size: rem(18px);
 		line-height: rem(21.33px);
-		padding-inline: rem(45.5px);
-		padding-block: rem(16.5px);
+		padding: rem(16.5px) rem(45.5px);
 	}
 
 	&--filled {

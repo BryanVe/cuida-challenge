@@ -1,0 +1,203 @@
+.pricing-section {
+	display: grid;
+	place-items: center;
+
+	&__content {
+		width: 100%;
+		max-width: rem(1009px);
+		overflow-y: hidden;
+
+		&__header {
+			max-width: rem(559px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: rem(16px);
+			margin: 0 auto;
+			margin-bottom: rem(21px);
+
+			h2 {
+				color: var(--gray-950);
+				font-size: rem(30px);
+				line-height: rem(35.55px);
+				text-align: center;
+
+				@include respond-to('mobile') {
+					font-size: rem(18.01px);
+					line-height: rem(21.34px);
+				}
+			}
+
+			p {
+				color: var(--gray-800);
+				font-size: rem(16px);
+				line-height: rem(18.96px);
+				text-align: center;
+				height: rem(77px);
+
+				@include respond-to('mobile') {
+					font-size: rem(9.6px);
+					line-height: rem(11.38px);
+					height: rem(46px);
+				}
+			}
+
+			@include respond-to('mobile') {
+				gap: rem(9.6px);
+				max-width: rem(258px);
+				margin-bottom: 0;
+			}
+		}
+
+		&__plans {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: rem(29px);
+			overflow-y: auto;
+
+			.plan-card {
+				justify-self: center;
+				min-width: rem(317px);
+				border: rem(2px) solid var(--gray-300);
+				padding: rem(21px) rem(56.5px);
+				border-radius: rem(20px);
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				&__image {
+					width: 100%;
+					aspect-ratio: 146 / 167;
+					max-width: rem(146px);
+
+					img {
+						width: 100%;
+						height: 100%;
+						overflow: hidden;
+					}
+
+					@include respond-to('mobile') {
+						width: rem(79.82px);
+					}
+				}
+
+				h3 {
+					margin-top: rem(40px);
+					color: var(--gray-950);
+					font-size: rem(20px);
+					line-height: rem(23.7px);
+
+					@include respond-to('mobile') {
+						font-size: rem(10.93px);
+						line-height: rem(12.96px);
+						margin-top: rem(21.87px);
+					}
+				}
+
+				&__details {
+					flex: 1;
+					margin-top: rem(55px);
+
+					ul {
+						list-style-type: none;
+						display: flex;
+						flex-direction: column;
+						gap: rem(40px);
+
+						li {
+							color: var(--gray-950);
+							font-size: rem(16px);
+							line-height: rem(18.96px);
+							display: flex;
+							align-items: center;
+							gap: rem(14px);
+
+							svg {
+								$icon-size: rem(24px);
+								width: $icon-size;
+								height: $icon-size;
+								color: var(--green);
+
+								@include respond-to('mobile') {
+									$icon-size: rem(13.12px);
+									width: $icon-size;
+									height: $icon-size;
+								}
+							}
+
+							@include respond-to('mobile') {
+								font-size: rem(8.75px);
+								line-height: rem(10.37px);
+							}
+						}
+
+						@include respond-to('mobile') {
+							gap: rem(21.87px);
+						}
+					}
+
+					@include respond-to('mobile') {
+						margin-top: rem(30.07px);
+						width: rem(118px);
+					}
+				}
+
+				&__price {
+					margin-block: rem(31px) rem(22px);
+					font-size: rem(28px);
+					line-height: rem(33.18px);
+					font-weight: 600;
+					color: var(--gray-950);
+
+					&__divider {
+						color: var(--gray-700);
+					}
+
+					&__period {
+						font-size: rem(20px);
+						line-height: rem(23.7px);
+						color: var(--gray-700);
+						font-weight: 400;
+
+						@include respond-to('mobile') {
+							font-size: rem(10.93px);
+							line-height: rem(12.96px);
+						}
+					}
+
+					@include respond-to('mobile') {
+						margin-block: rem(16.95px) rem(10.93px);
+						font-size: rem(15.31px);
+						line-height: rem(18.14px);
+					}
+				}
+
+				&__select-button {
+					font-weight: 500;
+
+					@include respond-to('mobile') {
+						width: rem(94.58px);
+						height: rem(24.6px);
+						font-size: rem(10.93px);
+						line-height: rem(12.96px);
+						padding: rem(5.8px) rem(30.29px);
+					}
+				}
+
+				@include respond-to('mobile') {
+					padding: rem(11.56px) rem(30.76px);
+					min-width: rem(173.3px);
+					max-width: rem(173.3px);
+					border-width: rem(1.09px);
+				}
+			}
+
+			@include respond-to('mobile') {
+				margin: 0 auto;
+				padding-inline: 32px;
+				padding: rem(18px) rem(32px);
+			}
+		}
+	}
+}
