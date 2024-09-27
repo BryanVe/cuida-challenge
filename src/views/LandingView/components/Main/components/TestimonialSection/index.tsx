@@ -4,6 +4,7 @@ import profileImage3 from 'assets/images/profile-image-3.webp'
 
 import { Icon } from '~/components'
 
+import { useTestimonials } from './hooks'
 import './style.scss'
 
 const testimonials = [
@@ -62,6 +63,14 @@ const testimonials = [
 ] as const
 
 const TestimonialSection = () => {
+	const {
+		testimonialsContentRef,
+		disableLeftButton,
+		disableRightButton,
+		scrollToLeft,
+		scrollToRight
+	} = useTestimonials()
+
 	return (
 		<section
 			id='testimonial'
@@ -76,7 +85,10 @@ const TestimonialSection = () => {
 					</p>
 				</div>
 				<div className='testimonials'>
-					<div className='testimonials__content'>
+					<div
+						ref={testimonialsContentRef}
+						className='testimonials__content'
+					>
 						{testimonials.map(
 							({ country, description, id, name, profileImage, rating }) => (
 								<div
@@ -117,10 +129,17 @@ const TestimonialSection = () => {
 							<div className='dot'></div>
 						</div>
 						<div className='testimonials__paginator__right'>
-							<button>
+							<button
+								onClick={scrollToLeft}
+								disabled={disableLeftButton}
+							>
 								<Icon name='arrowCircleLeft' />
 							</button>
-							<button className='active'>
+							<button
+								className='active'
+								onClick={scrollToRight}
+								disabled={disableRightButton}
+							>
 								<Icon name='arrowCircleRight' />
 							</button>
 						</div>

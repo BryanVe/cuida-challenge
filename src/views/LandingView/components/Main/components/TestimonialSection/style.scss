@@ -242,12 +242,12 @@
 						border-radius: rem(20px);
 
 						svg {
-							color: var(--gray-200);
+							color: var(--purple-700);
 						}
 
-						&.active {
+						&:disabled {
 							svg {
-								color: var(--purple-700);
+								color: var(--gray-200);
 							}
 						}
 
