@@ -63,7 +63,10 @@ const testimonials = [
 
 const TestimonialSection = () => {
 	return (
-		<section className='testimonial-section'>
+		<section
+			id='testimonial'
+			className='testimonial-section'
+		>
 			<div className='testimonial-section__content'>
 				<div className='testimonial-section__content__header'>
 					<h2>Trusted by thousands of happy customer</h2>

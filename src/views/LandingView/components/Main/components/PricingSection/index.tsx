@@ -40,7 +40,10 @@ const plans = [
 
 const PricingSection = () => {
 	return (
-		<section className='pricing-section'>
+		<section
+			id='pricing'
+			className='pricing-section'
+		>
 			<div className='pricing-section__content'>
 				<div className='pricing-section__content__header'>
 					<h2>Choose your plan</h2>
