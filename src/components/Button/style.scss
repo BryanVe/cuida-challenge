@@ -42,9 +42,4 @@
 		background-color: transparent;
 		color: var(--gray-950);
 	}
-
-	&:focus-visible {
-		outline: rem(2px) solid var(--purple-700);
-		outline-offset: rem(1px);
-	}
 }

@@ -113,11 +113,12 @@ const TestimonialSection = () => {
 							<div className='dot'></div>
 						</div>
 						<div className='testimonials__paginator__right'>
-							<Icon name='arrowCircleLeft' />
-							<Icon
-								name='arrowCircleRight'
-								className='active'
-							/>
+							<button>
+								<Icon name='arrowCircleLeft' />
+							</button>
+							<button className='active'>
+								<Icon name='arrowCircleRight' />
+							</button>
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 button {
 	background-color: unset;
 	border: none;
-	outline: none;
+	outline-offset: rem(0px);
 	cursor: pointer;
 
 	&:disabled {

@@ -234,14 +234,20 @@
 					display: flex;
 					gap: rem(42px);
 
-					svg {
+					button {
 						$icon-size: rem(45px);
 						width: $icon-size;
 						height: $icon-size;
-						color: var(--gray-200);
+						border-radius: rem(20px);
+
+						svg {
+							color: var(--gray-200);
+						}
 
 						&.active {
-							color: var(--purple-700);
+							svg {
+								color: var(--purple-700);
+							}
 						}
 
 						@include respond-to('mobile') {
