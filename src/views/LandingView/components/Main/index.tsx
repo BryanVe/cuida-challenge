@@ -1,4 +1,9 @@
-import { FeaturesSection, HeroSection, PricingSection } from './components'
+import {
+	FeaturesSection,
+	HeroSection,
+	PricingSection,
+	TestimonialSection
+} from './components'
 import './style.scss'
 
 const Main = () => (
@@ -6,6 +11,7 @@ const Main = () => (
 		<HeroSection />
 		<FeaturesSection />
 		<PricingSection />
+		<TestimonialSection />
 	</main>
 )
 
