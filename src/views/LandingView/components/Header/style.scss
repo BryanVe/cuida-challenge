@@ -1,10 +1,12 @@
 .header {
 	position: fixed;
+	z-index: 1000;
 	inset: 0 0 auto 0;
 	padding-block: rem(30px);
 	padding-inline: rem(19px);
 	display: flex;
 	justify-content: center;
+	background-color: var(--white);
 
 	&__content {
 		width: 100%;
