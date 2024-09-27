@@ -1,5 +1,6 @@
 import { Icon, Logo } from '~/components'
 
+import { SubscribeCard } from './components'
 import './style.scss'
 
 const navSections = [
@@ -93,6 +94,7 @@ const socialLinks = [
 
 const Footer = () => (
 	<footer className='footer'>
+		<SubscribeCard />
 		<div className='footer__content'>
 			<div className='footer__content__contact footer__content__contact--desktop'>
 				<Logo />

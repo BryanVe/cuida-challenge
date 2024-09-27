@@ -1,5 +1,5 @@
 .testimonial-section {
-	padding-bottom: rem(104px);
+	padding-bottom: rem(265px);
 	padding-inline: rem(19px);
 
 	&__content {
@@ -264,6 +264,6 @@
 	}
 
 	@include respond-to('mobile') {
-		padding-bottom: rem(58px);
+		padding-bottom: rem(397px);
 	}
 }
