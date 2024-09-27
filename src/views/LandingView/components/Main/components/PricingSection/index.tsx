@@ -49,45 +49,47 @@ const PricingSection = () => {
 						arcu id purus ullamcorper. Vel vel erat semper augue.
 					</p>
 				</div>
-				<div className='pricing-section__content__plans'>
-					{plans.map(({ details, price, title }) => {
-						const isFree = price === 0
+				<div className='plans'>
+					<div className='plans__content'>
+						{plans.map(({ details, price, title }) => {
+							const isFree = price === 0
 
-						return (
-							<div
-								key={title}
-								className='plan-card'
-							>
-								<div className='plan-card__image'>
-									<img
-										src={planImage}
-										alt='Plan image'
-									/>
+							return (
+								<div
+									key={title}
+									className={'plan-card'}
+								>
+									<div className='plan-card__image'>
+										<img
+											src={planImage}
+											alt='Plan image'
+										/>
+									</div>
+									<h3>{title}</h3>
+									<div className='plan-card__details'>
+										<ul>
+											{details.map(detail => (
+												<li key={detail}>
+													<Icon name='circleCheck' />
+													{detail}
+												</li>
+											))}
+										</ul>
+									</div>
+									<div className='plan-card__price'>
+										<span>{isFree ? 'Free' : `$ ${price}`}</span>
+										{!isFree && (
+											<>
+												<span className='plan-card__price__divider'> / </span>
+												<span className='plan-card__price__period'>mo</span>
+											</>
+										)}
+									</div>
+									<Button className='plan-card__select-button'>Select</Button>
 								</div>
-								<h3>{title}</h3>
-								<div className='plan-card__details'>
-									<ul>
-										{details.map(detail => (
-											<li key={detail}>
-												<Icon name='circleCheck' />
-												{detail}
-											</li>
-										))}
-									</ul>
-								</div>
-								<div className='plan-card__price'>
-									<span>{isFree ? 'Free' : `$ ${price}`}</span>
-									{!isFree && (
-										<>
-											<span className='plan-card__price__divider'> / </span>
-											<span className='plan-card__price__period'>mo</span>
-										</>
-									)}
-								</div>
-								<Button className='plan-card__select-button'>Select</Button>
-							</div>
-						)
-					})}
+							)
+						})}
+					</div>
 				</div>
 			</div>
 		</section>
