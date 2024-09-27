@@ -11,10 +11,25 @@
 		padding-block: rem(6.5px);
 	}
 
+	&--md {
+		width: rem(193px);
+		height: rem(54px);
+		font-size: rem(18px);
+		line-height: rem(21.33px);
+		padding-inline: rem(45.5px);
+		padding-block: rem(16.5px);
+	}
+
+	&--filled {
+		background-color: var(--purple-700);
+		color: var(--white);
+		border: none;
+	}
+
 	&--outlined {
 		background-color: var(--white);
-		color: var(--purple);
-		border: rem(2px) solid var(--purple);
+		color: var(--purple-700);
+		border: rem(2px) solid var(--purple-700);
 	}
 
 	&--transparent {
@@ -23,7 +38,7 @@
 	}
 
 	&:focus-visible {
-		outline: rem(2px) solid var(--purple);
+		outline: rem(2px) solid var(--purple-700);
 		outline-offset: rem(1px);
 	}
 }
