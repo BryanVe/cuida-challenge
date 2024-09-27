@@ -1,6 +1,7 @@
 .button {
 	box-sizing: border-box;
 	border-radius: rem(20px);
+	transition: all 0.1s ease-in-out;
 
 	&--sm {
 		width: rem(101px);
@@ -36,10 +37,22 @@
 		background-color: var(--white);
 		color: var(--purple-700);
 		border: rem(2px) solid var(--purple-700);
+
+		&:hover {
+			background-color: var(--purple-50);
+		}
 	}
 
 	&--transparent {
 		background-color: transparent;
 		color: var(--gray-950);
+
+		&:hover {
+			background-color: var(--gray-50);
+		}
+	}
+
+	&:active {
+		transform: scale(0.96);
 	}
 }

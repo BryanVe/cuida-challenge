@@ -36,6 +36,10 @@
 						font-size: rem(16px);
 						line-height: rem(18.96px);
 						color: var(--gray-950);
+
+						&:hover {
+							color: var(--purple-700);
+						}
 					}
 				}
 			}

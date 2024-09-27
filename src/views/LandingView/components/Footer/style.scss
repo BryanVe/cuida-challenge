@@ -99,6 +99,10 @@
 							font-size: rem(12.56px);
 							line-height: rem(14.89px);
 						}
+
+						&:hover {
+							color: var(--purple-700);
+						}
 					}
 				}
 			}

@@ -173,7 +173,7 @@
 						}
 					}
 
-					&:first-child {
+					&:hover {
 						box-shadow: 0 0 0 rem(1px) inset var(--purple-700);
 					}
 
@@ -183,7 +183,7 @@
 						box-shadow: 0 0 0 rem(0.64px) inset var(--gray-400);
 						padding: rem(13.36px) rem(24px);
 
-						&:first-child {
+						&:hover {
 							box-shadow: 0 0 0 rem(0.64px) inset var(--purple-700);
 						}
 					}
