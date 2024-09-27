@@ -1,3 +1,4 @@
+import CircleCheck from './CircleCheck'
 import Facebook from './Facebook'
 import Location from './Location'
 import Menu from './Menu'
@@ -13,5 +14,6 @@ export const icons = {
 	youtube: Youtube,
 	user: User,
 	location: Location,
-	server: Server
+	server: Server,
+	circleCheck: CircleCheck
 } as const

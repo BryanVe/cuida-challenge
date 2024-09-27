@@ -1,12 +1,11 @@
-import { HeroSection } from './components'
+import { FeaturesSection, HeroSection } from './components'
 import './style.scss'
 
-const Main = () => {
-	return (
-		<main>
-			<HeroSection />
-		</main>
-	)
-}
+const Main = () => (
+	<main>
+		<HeroSection />
+		<FeaturesSection />
+	</main>
+)
 
 export default Main
